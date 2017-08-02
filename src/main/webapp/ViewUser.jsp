@@ -1,6 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="ru.test.User" %>
+<%@ page import="ru.phonebook.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
@@ -14,6 +14,7 @@
     <form action="<c:url value="/phonebook"/>" method="POST">
         <input type="hidden" name="userID" value="${user.id}"/>
                 <table align="center">
+                    <tr>
                     <td align="left"><a href="index.jsp">На главную</a></td>
                     <td align="right">Фамилия:</td><td>${user.lastname}</td>
                     <td rowspan="4"><a href="phonebook?action=view&userID=${user.id}&ps=view"><img src="images/edituser.png" width="25" height="25"></a></td>
@@ -44,7 +45,6 @@
                         </tr>
                     </c:forEach>
                     <% } else { %>
-                    <%--<input type="hidden" name="userID" value="${user.id}"/>--%>
                     <tr>
                         <td></td><td></td><td><input type="text" name="email" value="${email}"/><input type="submit" value="Добавить" name="AddEmail"/></td>
                     </tr>
@@ -64,7 +64,6 @@
                         </tr>
                     </c:forEach>
                     <% } else {%>
-                    <%--<input type="hidden" name="userID" value="${user.id}"/>--%>
                     <tr>
                         <td></td><td></td><td><input type="text" name="phone" value="${phone}"/><input type="submit" name="AddPhone" value="Добавить"></td>
                     </tr>

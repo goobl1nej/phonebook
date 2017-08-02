@@ -16,7 +16,8 @@ public class UserDataChangeServlet extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         if (req.getParameter("OK")!=null) {
             insUser(req);
-            req.getRequestDispatcher("/phonebook?action=all").forward(req, resp);
+//            req.getRequestDispatcher("/phonebook?action=all").forward(req, resp);
+            resp.sendRedirect("/phonebook?action=all");
         }
         if (req.getParameter("editUser")!=null) {
             if (req.getParameter("userID")!=null && !req.getParameter("userID").isEmpty()) {

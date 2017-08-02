@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <title>Список пользователей</title>
@@ -40,8 +40,8 @@
                 <tr>
                     <td class="cell">${user.lastname}</td>
                     <td class="cell">${user.firstname}</td>
-                    <%--<td class="cell"><fmt:formatDate pattern = "dd.MM.yyyy" value = "${user.birthday}" /></td>--%>
-                    <td class="cell">${user.birthday}</td>
+                    <td class="cell"><fmt:formatDate pattern = "dd.MM.yyyy" value = "${user.birthday}" /></td>
+                    <%--<td class="cell">${user.birthday}</td>--%>
                     <td class="cell"><a href="phonebook?action=view&userID=${user.id}">Карточка пользователя</a></td>
                 </tr>
             </c:forEach>

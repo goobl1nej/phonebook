@@ -1,12 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  ru.test.User: root
-  Date: 22.05.2017
-  Time: 15:29
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <html>
 <head>
@@ -28,7 +22,7 @@
                     </tr>
                     <tr>
                         <td>Дата рождения:</td>
-                        <td><div title="Введите дату в формате dd.MM.yyyy"><input type="text" pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}" name="birthday" value='<fmt:formatDate pattern = "dd.MM.yyyy" value = "${user.birthday}" />'/></div></td>
+                        <td><div title="Введите дату в формате dd.MM.yyyy"><input type="text" pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}" name="birthday" value="<fmt:formatDate pattern = "dd.MM.yyyy" value = "${user.birthday}" />"/></div></td>
                     </tr>
                     <tr>
                         <td><input type="submit" value="Сохранить" name="editUser"/></td>

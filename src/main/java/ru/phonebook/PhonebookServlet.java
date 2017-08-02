@@ -1,7 +1,7 @@
 package ru.phonebook;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.*;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
@@ -12,13 +12,7 @@ public class PhonebookServlet extends HttpServlet{
     protected void chooseToDo(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         if (req.getParameter("action")!=null && req.getParameter("action").equals("add")){
-//            ru.test.User insUser = new ru.test.User();
-//            insUser.setId(0);
-//            req.setAttribute("user", insUser);
             getServletContext().getRequestDispatcher("/UserAdd.jsp").forward(req,resp);
-        }
-        if (req.getParameter("Edit")!=null){
-
         }
         if (req.getParameter("AddEmail")!=null){
             if ( req.getParameter("userID")!=null && !req.getParameter("userID").isEmpty()){
