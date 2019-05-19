@@ -23,7 +23,7 @@ public class Crud {
             connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
             usersPS=connectiondb.prepareStatement("SELECT * FROM user_");
             emailsOfUserPS=connectiondb.prepareStatement("SELECT * FROM email_ WHERE user_id=?");
-            phonesOfUserPS=connectiondb.prepareStatement("SELECT * FROM phone_ WHERE user_id=?");
+                phonesOfUserPS=connectiondb.prepareStatement("SELECT * FROM phone_ WHERE user_id=?");
 
             ResultSet userset =usersPS.executeQuery();
             if(userset!=null) {
