@@ -17,7 +17,7 @@ public final class ConfigRead {
         Properties properties = new Properties();
 
         try {
-            conf = new FileInputStream("src/main/resources/settings.properties");
+            conf = new FileInputStream("/Users/vertigo/IdeaProjects/phonebook/src/main/resources/settings.properties");
             properties.load(conf);
 
             HOST = properties.getProperty("db.host");
