@@ -6,9 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6cf499d-a54a-49b0-b3a6-c982d75f399f" name="Default" comment="F">
+    <list default="true" id="e6cf499d-a54a-49b0-b3a6-c982d75f399f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phonebook.iml" beforeDir="false" afterPath="$PROJECT_DIR$/phonebook.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/phonebook/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/phonebook/Crud.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -46,11 +45,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/phonebook/Crud.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3327">
-              <caret line="23" column="70" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="70" />
+            <state relative-caret-position="5788">
+              <caret line="392" column="88" selection-start-line="392" selection-start-column="88" selection-end-line="392" selection-end-column="88" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/phonebook/ConfigRead.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/settings.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="20" selection-start-column="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -59,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/target/phonebook/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -120,6 +143,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/UserAdd.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/ru/phonebook/UserDataChangeServlet.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/phonebook/PhonebookServletTest.java" />
+        <option value="$PROJECT_DIR$/resources/settings.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/phonebook/ConfigRead.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/phonebook/Crud.java" />
       </list>
     </option>
@@ -150,11 +175,10 @@
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="70" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1281" />
-    <option name="height" value="813" />
+    <option name="width" value="1440" />
+    <option name="height" value="814" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -205,12 +229,16 @@
             <path>
               <item name="phonebook" type="b2602c69:ProjectViewProjectNode" />
               <item name="phonebook" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="phonebook" type="b2602c69:ProjectViewProjectNode" />
               <item name="phonebook" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="phonebook" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -246,11 +274,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
       <recent name="C:\Users\root\IdeaProjects\phonebook" />
       <recent name="C:\Users\root\IdeaProjects\phonebook\src\main\resources\lib" />
       <recent name="C:\Users\root\IdeaProjects\phonebook\src\main\java" />
       <recent name="C:\Users\root\IdeaProjects\phonebook\src\main\ru" />
-      <recent name="C:\Users\root\IdeaProjects\phonebook\src\main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -702,8 +730,16 @@
       <workItem from="1501579409549" duration="3679000" />
       <workItem from="1531903322844" duration="260000" />
       <workItem from="1557687654472" duration="1145000" />
-      <workItem from="1558297387381" duration="1097000" />
+      <workItem from="1558297387381" duration="4941000" />
     </task>
+    <task id="LOCAL-00001" summary="F">
+      <created>1558302227585</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558302227585</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -718,7 +754,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100437000" />
+    <option name="totallyTimeSpent" value="104281000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -730,7 +766,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="814" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="814" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21030043" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -771,6 +808,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="F" />
+    <option name="LAST_COMMIT_MESSAGE" value="F" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -898,10 +939,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/phonebook/UserDataChangeServlet.java">
+    <entry file="file://$PROJECT_DIR$/target/phonebook/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" column="73" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
+        <state relative-caret-position="225">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/settings.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -915,17 +963,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/phonebook/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/phonebook/UserDataChangeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        <state relative-caret-position="165">
+          <caret line="18" column="73" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/phonebook/Crud.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3327">
-          <caret line="23" column="70" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="70" />
+        <state relative-caret-position="5788">
+          <caret line="392" column="88" selection-start-line="392" selection-start-column="88" selection-end-line="392" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/phonebook/ConfigRead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

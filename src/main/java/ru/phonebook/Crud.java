@@ -1,5 +1,6 @@
 package ru.phonebook;
 
+import ru.phonebook.ConfigRead;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,10 +18,9 @@ public class Crud {
         PreparedStatement emailsOfUserPS=null;
         PreparedStatement phonesOfUserPS=null;
 
-
         try {
             Class.forName("org.postgresql.Driver");
-            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://"+ConfigRead.HOST+":5432/"+ConfigRead.NAME,ConfigRead.USER,ConfigRead.PASS);
             usersPS=connectiondb.prepareStatement("SELECT * FROM user_");
             emailsOfUserPS=connectiondb.prepareStatement("SELECT * FROM email_ WHERE user_id=?");
                 phonesOfUserPS=connectiondb.prepareStatement("SELECT * FROM phone_ WHERE user_id=?");
@@ -106,7 +106,7 @@ public class Crud {
 
         try {
             Class.forName("org.postgresql.Driver");
-            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://"+ConfigRead.HOST+":5432/"+ConfigRead.NAME,ConfigRead.USER,ConfigRead.PASS);
             usersPS=connectiondb.prepareStatement("SELECT * FROM user_ WHERE user_id=?");
             emailsOfUserPS=connectiondb.prepareStatement("SELECT * FROM email_ WHERE user_id=?");
             phonesOfUserPS=connectiondb.prepareStatement("SELECT * FROM phone_ WHERE user_id=?");
@@ -189,7 +189,7 @@ public class Crud {
 
         try {
             Class.forName("org.postgresql.Driver");
-            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://"+ConfigRead.HOST+":5432/"+ConfigRead.NAME,ConfigRead.USER,ConfigRead.PASS);
             usersPS=connectiondb.prepareStatement("INSERT INTO user_"+"(lastname,firstname,middlename,birthday)"+"VALUES (?,?,?,?)");
             emailsOfUserPS=connectiondb.prepareStatement("INSERT INTO email_"+"(user_id,email)"+"VALUES (?,?)");
             phonesOfUserPS=connectiondb.prepareStatement("INSERT INTO phone_"+"(user_id,phone)"+"VALUES (?,?)");
@@ -247,7 +247,7 @@ public class Crud {
 
         try{
             Class.forName("org.postgresql.Driver");
-            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://"+ConfigRead.HOST+":5432/"+ConfigRead.NAME,ConfigRead.USER,ConfigRead.PASS);
             emailsOfUserPS=connectiondb.prepareStatement("INSERT INTO email_ (user_id,email) VALUES (?,?)");
             emailsOfUserPS.setLong(1,userID);
             emailsOfUserPS.setString(2,email);
@@ -265,7 +265,7 @@ public class Crud {
 
         try{
             Class.forName("org.postgresql.Driver");
-            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://"+ConfigRead.HOST+":5432/"+ConfigRead.NAME,ConfigRead.USER,ConfigRead.PASS);
             emailsPS = connectiondb.prepareStatement("UPDATE email_ SET email=? WHERE email_id=?");
             emailsPS.setLong(2,emailID);
             emailsPS.setString(1,email);
@@ -283,7 +283,7 @@ public class Crud {
 
         try {
             Class.forName("org.postgresql.Driver");
-            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://"+ConfigRead.HOST+":5432/"+ConfigRead.NAME,ConfigRead.USER,ConfigRead.PASS);
             emailPS = connectiondb.prepareStatement("DELETE FROM email_ WHERE email_id=?");
             emailPS.setLong(1, emailID);
             emailPS.execute();
@@ -300,7 +300,7 @@ public class Crud {
 
         try{
             Class.forName("org.postgresql.Driver");
-            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://"+ConfigRead.HOST+":5432/"+ConfigRead.NAME,ConfigRead.USER,ConfigRead.PASS);
             phonesOfUserPS=connectiondb.prepareStatement("INSERT INTO phone_ (user_id,phone) VALUES (?,?)");
             phonesOfUserPS.setLong(1,userID);
             phonesOfUserPS.setString(2,phone);
@@ -318,7 +318,7 @@ public class Crud {
 
         try{
             Class.forName("org.postgresql.Driver");
-            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://"+ConfigRead.HOST+":5432/"+ConfigRead.NAME,ConfigRead.USER,ConfigRead.PASS);
             phonePS = connectiondb.prepareStatement("UPDATE phone_ SET phone=? WHERE phone_id=?");
             phonePS.setLong(2,phoneID);
             phonePS.setString(1,phone);
@@ -336,7 +336,7 @@ public class Crud {
 
         try {
             Class.forName("org.postgresql.Driver");
-            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://"+ConfigRead.HOST+":5432/"+ConfigRead.NAME,ConfigRead.USER,ConfigRead.PASS);
             phonePS = connectiondb.prepareStatement("DELETE FROM phone_ WHERE phone_id=?");
             phonePS.setLong(1,phoneID);
             phonePS.execute();
@@ -353,7 +353,7 @@ public class Crud {
 
         try {
             Class.forName("org.postgresql.Driver");
-            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://"+ConfigRead.HOST+":5432/"+ConfigRead.NAME,ConfigRead.USER,ConfigRead.PASS);
             usersPS=connectiondb.prepareStatement("UPDATE user_ SET lastname=?,firstname=?,middlename=?,birthday=? WHERE user_id=?");
             usersPS.setString(1,user.getLastname());
             usersPS.setString(2,user.getFirstname());
@@ -388,7 +388,7 @@ public class Crud {
 
         try {
             Class.forName("org.postgresql.Driver");
-            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://"+ConfigRead.HOST+":5432/"+ConfigRead.NAME,ConfigRead.USER,ConfigRead.PASS);
             usersPS=connectiondb.prepareStatement("DELETE FROM user_ WHERE user_id=?");
             emailsOfUserPS=connectiondb.prepareStatement("DELETE FROM email_ WHERE user_id=?");
             phonesOfUserPS=connectiondb.prepareStatement("DELETE FROM phone_ WHERE user_id=?");
